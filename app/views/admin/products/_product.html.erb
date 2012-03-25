@@ -1,0 +1,71 @@
+<div class="span8">
+  <!-- Description -->
+  <div class="row-fluid section-header">
+  	<%=t("admin.products.show.description")%>
+  </div>
+  
+  <br /> 
+  
+  <div class="row-fluid">
+  	<div class="product_description">
+  		<%=sanitize(@product.description)%>
+  	</div> 
+  </div> 
+ 
+  <br /> 
+ 
+  <!-- Properties -->
+  <div class="row-fluid">
+  	<div class="row-fluid section-header">
+    	<div>
+    		<%=t("admin.products.show.properties")%>
+    	</div>
+        
+    </div>
+        
+ </div>
+ 
+ <br />
+ <br />       
+ <!-- Property product type-->
+ <div class="row-fluid">
+ 	<div class="span4 product_property">
+    	<%=t("admin.products.show.product_type")%>
+    </div>
+    <div class="span7 product_property_value">
+    	<%=@product.class%>
+    </div> 
+ </div>
+ <hr />
+ 
+ <!-- Property product vendor -->
+ <div class="row-fluid">
+ 	<div class="span4 product_property">
+    	<%=t("admin.products.show.product_vendor")%>
+    </div>
+    <div class="span7 product_property_value">
+          <%=@product.class%>
+    </div>            
+ </div>
+ <hr />
+ 
+ <!-- Property product created at-->
+   
+ <div class="row-fluid">
+ 	<div class="span4 product_property">
+    	<%=t("admin.products.show.product_created_at")%>
+    </div>
+    <div class="span7 product_property_value">
+    	<%=@product.created_at%>
+    </div>            
+ </div>
+ <br />
+ <br />       
+        
+</div> <!-- Da inserire lo span 3 per immagini-->
+    
+<div class="span4">
+	
+	<!-- Da valutare ...-->
+	
+</div>            

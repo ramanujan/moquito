@@ -1,0 +1,29 @@
+<div class="row-fluid">
+	
+	<div class="shadow_wrapper span9">
+		
+		<div class="shadow_base span9 cico">
+
+			<div class="row-fluid">
+
+  				<div class="span12">
+  
+            		<h1 class="page-header" style="text-align:center"><%=t("admin.products.new.heading")%></h1>
+                    <%=render partial:'shared/errors',locals:{model:@product}%>
+  				</div>
+    
+			</div>
+
+			<div class="row-fluid">
+
+				<div class="span12">
+		
+					<%=render 'form'%>
+          		
+				</div>
+
+			</div>
+
+		</div> 
+	</div>
+</div>

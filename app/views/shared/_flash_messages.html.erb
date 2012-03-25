@@ -1,0 +1,14 @@
+<%unless flash.empty? %>
+  <%flash.each do |k,v|%> 
+    <div class='alert <%="alert-#{k}"%>'>
+    	<a class="close" data-dismiss="alert" href="#">&times;</a>
+    	<%if model.instance_of? Product %>
+    	  <%=v+" "+t("admin.products.create.view_it")%>
+    	  <%=link_to t("admin.products.create.where"),admin_products_path%>
+    	  <%=t("admin.products.create.or_continue_and")%>
+    	  <%=link_to t("admin.products.create.create_another"),new_admin_product_path%> 
+    	<%end%>
+    	
+    </div>
+  <%end%>
+<%end%>

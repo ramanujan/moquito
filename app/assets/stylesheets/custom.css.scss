@@ -1,8 +1,117 @@
 @import 'bootstrap';
 @import 'bootstrap-responsive';
+@import 'settings';
+@import 'colors';
+@import 'errors';
+
+body{
+  padding:60px;
+  margin:0px;
+}
+
+a:hover{
+ text-decoration:none; 
+}
 
 .gray_border{
  
-  border:solid 1px #c1c1c1;
+  border-right:solid 1px #c1c1c1;
 
+}
+
+.main_nav{
+  padding:0.5%;
+  border-right:solid 1px #a1a1a1;
+  
+}
+
+.first{
+   border-left:solid 1px #a1a1a1;
+}
+
+.centered{
+  text-align:center;
+  
+}
+
+
+.metalic{
+  @include metalic;
+}
+
+.section-header{
+  @include metalic;
+  font-weight:bold;
+}
+
+.shadow_base{
+  border:solid 1px #c1c1c1;
+  padding:1.5%;
+  @include shadow;  
+  margin:0px;
+}
+
+.shadow_wrapper{
+  box-shadow: -2px -2px 5px #ccc;
+  -moz-box-shadow: -2px -2px 5px #ccc;
+  -webkit-box-shadow: -2px -2px 5px #ccc;
+  padding:0px;
+  
+  //border: solid 1px blue; 
+  
+}
+
+.cico{
+  background-color:#fff;
+}
+
+
+/* Bootstrap override */
+
+.page-header{
+ // text-align:center;
+}
+
+
+.btn-group{
+  .btn {
+    margin-right:0.5%;
+  }
+}
+ 
+
+  label{
+    font-size:110%;
+    font-weight:bold;
+    }
+
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  height: auto;
+  line_height:110%;
+  margin-bottom: 1.5%;
+  font-size:120%;
+  
+  @include radius-7;
+  
+  
+}
+
+input{
+  width:30%;
+  row_span:3;
+}
+
+textarea{
+  width:50%;
+}
+
+input.price{
+    width:10%;
+  }
+
+.submit{
+  @include metalic;
+  padding:1.5%;
 }

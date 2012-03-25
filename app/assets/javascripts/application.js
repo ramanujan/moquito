@@ -13,3 +13,11 @@
 //=require    jquery
 //=require    jquery_ujs
 //=require    bootstrap
+
+$(document).ready(function() {
+    var pathname = window.location.pathname;
+    if( pathname.match('^\/admin') ){
+    	$('body').css("background","#fafdf4");
+    }
+    
+});
