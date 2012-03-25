@@ -5,13 +5,18 @@ Moquito::Application.routes.draw do
 
   get "/about",to:"static_pages#about"
   
+  get '/heroku_reset', to:"static_pages#heroku_db_reset"
+  
+  get '/heroku_migrate', to:"static_pages#heroku_db_migrate"
+  
   root :to => 'static_pages#home'
   
   namespace :admin do
     root to:"base#index"
     resources :products
   end
-
+  
+  
 =begin  
  
   admin_root                /admin(.:format)                   admin/base#index

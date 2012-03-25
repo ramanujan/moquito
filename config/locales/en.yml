@@ -10,6 +10,8 @@ en:
   go_to_store: "Go to Store"
   go_to_store_admin: "Go to Store Admin"
   payment: "Available Payment methods"
+  home: "Home"
+  about: "About"
   
   admin:
     base:
