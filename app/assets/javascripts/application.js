@@ -13,6 +13,7 @@
 //=require    jquery
 //=require    jquery_ujs
 //=require    bootstrap
+// require prova_jquery
 
 $(document).ready(function() {
     var pathname = window.location.pathname;

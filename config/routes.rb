@@ -1,4 +1,8 @@
 Moquito::Application.routes.draw do
+  get "store/index"
+
+  get "store/catalog"
+
   get "products/new"
 
   get "/home", to:"static_pages#home"
@@ -9,6 +13,8 @@ Moquito::Application.routes.draw do
   
   get '/heroku_migrate', to:"static_pages#heroku_db_migrate"
   
+  get '/store', to:"store#index"
+
   root :to => 'static_pages#home'
   
   namespace :admin do
