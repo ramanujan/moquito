@@ -1,7 +1,7 @@
 <%=form_for [:admin,@product] do |f| %>
   
   <div class="section-header">
-    <%=t("admin.products.new.section_header")%>
+    <%= @product.new_record? ? t("admin.products.new.section_header"):t("admin.products.edit.section_header")%>
   </div>
   
   <br />      
@@ -34,11 +34,13 @@
        
  
   <div>
-    <%=f.text_field :price, value:0.00, class:'price'%>
+    <%=f.text_field :price, placeholder:0.01, class:'price'%>
   </div>
  
   <div class="metalic">
-  	<%=f.submit t("admin.products.new.submit"),:class=>"btn btn-primary"%>
+  	
+  	<%= @product.new_record? ? (f.submit t("admin.products.new.submit"),:class=>"btn btn-primary") : 
+  	(f.submit t("admin.products.edit.submit"),:class=>"btn btn-primary")%>
   </div>   
 
 <%end%> 

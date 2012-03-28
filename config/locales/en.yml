@@ -34,12 +34,10 @@ en:
         heading: "Products"
       
       create:
-        success: "%{title} was successfully created!"
-        error: "%{title} product has not been created!"
-        view_it: "View it in "
+        success: "%{title} was successfully created! View it in %{where} or continue and %{another} "
         where: "your store"
-        or_continue_and: "or continue and "
-        create_another: "create another product" 
+        another: "continue and %{link}"
+        another_link: " create another" 
       show: 
         title: "Show product %{title}"
         delete_confirmation: "Are you sure you want to delete '%{title}' ?" 
@@ -49,4 +47,13 @@ en:
         product_vendor: "Product Vendor"
         product_inventory: "Inventory"
         product_created_at: "Created at"
+        product_price: "Selling price"
+      edit:
+        submit: "Update Product"
+        section_header: "Edit your product"
+      update:
+        success: "%{title} was successfully updated! View it in %{where}"
+        error: "product has not been updated! ==> %{msg}"
+      destroy:
+        success: "%{title} was successfully deleted!"
       find: "The product you are looking for could not be found"

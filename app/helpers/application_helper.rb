@@ -6,4 +6,6 @@ module ApplicationHelper
     @title ? (BASE_TITLE+" | "+@title) : BASE_TITLE 
   end
 
+ 
+
 end

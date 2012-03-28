@@ -1,29 +1,70 @@
 <div class="row-fluid">
 
-  <div class="span12">
-    <h1 class="page-header"><%=t("admin.products.index.heading")%></h1>
-  </div>  
+	<div class="shadow_wrapper span9">
+		<div class="shadow_base span9 cico">
+        
+        	<div class="row-fluid">
+            	 <div class="span12">
+                 	<h1 class="page-header"><%=t("admin.products.index.heading")%></h1>
+                 </div>   			
+        	</div>          
+            
+            <!-- Flash messages -->
+    		
+    		<div class="row-fluid">
+      			<div class="span12">
+        			<%=render 'shared/flash_messages'%>
+      			</div>
+    		</div>
+            
+            
+            <div class="row-fluid">
+            	<div class="span12">
+                	<div class="btn-group">
+    		        	<%=link_to t("admin.products.new.add_new_product"),
+    		        	new_admin_product_path,
+    		        	class:"btn btn-primary"%>
+    	                <button class="btn btn-primary"><%=t("admin.products.index.import_new_product")%></button>
+    		            <button class="btn btn-primary"><%=t("admin.products.index.export_new_product")%></button>	
+                    </div>	    
+       	
+            	</div>         
+            </div>
+            <hr />
+            <!-- Righe relative ai prodotti presenti. Una riga per ogni prodotto--> 
+           
+           <%if @products.any?%>
+           		<%@products.each do |product| %>
+                	<div class="row-fluid">
+                    
+                    	<div class="span3 debug_border">
+                        	<%=image_tag("missing_product.gif")%>     
+                        </div>
+                        
+                        <div class="span4 debug_border product_row_title">
+                        	<%=link_to product.title, [:admin,product] %>  
+                        </div>
+                        
+                        <div class="span2 debug_border"> 
+                          inventory
+                        </div>
+                        
+                        <div class="span2 debug_border">
+                         total
+                        </div>
+                         
+                    </div>
+                     <hr/>
+                    <%end%>
+                   
+           <%end%>
+            
+        </div>
+     </div>
 
-</div>    
-    
-<div class="row-fluid">
-
-	<div class="span12">
-    	
-    	<div class="btn-group">
-    		<%=link_to t("admin.products.new.add_new_product"),
-    		new_admin_product_path,
-    		class:"btn btn-primary"%>
-    	
-        	
-        	<button class="btn btn-primary"><%=t("admin.products.index.import_new_product")%></button>
-    		<button class="btn btn-primary"><%=t("admin.products.index.export_new_product")%></button>	
-        </div>	    
+</div>   
+   
+   
+   
   
-    </div>
-
-</div>
-
-
-
 
