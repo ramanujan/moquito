@@ -1,0 +1,49 @@
+<div class="row-fluid">
+
+	<div class="shadow_wrapper span12"> 
+  		<div class="shadow_base span12 cico">	
+	
+	       <%=render 'shared/heading_row'%>   
+	
+	       	 
+	    	<div class="row-fluid">
+			  
+			  <div class="span8 metalic-rounded">
+				
+				<!-- product title -->
+				<div>
+					<h1><%=@product.title%></h1>
+				</div>
+	            <hr class="gray_line">
+	            
+	           
+	            <div class="row-fluid">
+	               <!-- product image -->
+	              <div class="span4 bordered_right_white">
+	              <div class="bordered_right_gray">
+	              	<%=image_tag("missing_product.gif")%>
+	              </div>   
+	              </div>
+	            
+	              <!-- Price And Description-->
+	              <div class="span7">
+	            	
+	            	<h1 class="product_price_show"><%=number_to_currency(@product.price)%></h1>
+   	                
+   	                <hr class="gray_line" />
+	                
+	                <div class="product_description">
+	                  <%=sanitize(@product.description)%>
+	                </div>        	
+	              </div>
+	           </div>
+	          
+	          </div>
+	       
+	       </div>
+        
+        </div>
+    
+    </div>
+
+</div>

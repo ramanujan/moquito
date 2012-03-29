@@ -85,13 +85,11 @@ module StoreHelper
        
        
        
-       p"i==>#{i},products[i]==>#{products[i]},number_of_products_in_the_last_row ==> #{number_of_products_in_the_last_row(products) },index=>#{index}"
+       
          
        @container["row_#{index}"]=[]
         
        self.number_of_products_in_the_last_row(products).times do |volte|
-         p "All'terazione number : #{volte}"
-         p"Sto per inserire alla riga  row_#{index} il valore relativo puntato nell'array dall'indice #{i}: #{products[i]} "
          @container["row_#{index}"] << products[i] 
          i+=1 
        end   

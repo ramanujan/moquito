@@ -32,7 +32,7 @@ en:
         
       index:
         heading: "Products"
-      
+        title: "Available products" 
       create:
         success: "%{title} was successfully created! View it in %{where} or continue and %{another} "
         where: "your store"
@@ -57,3 +57,8 @@ en:
       destroy:
         success: "%{title} was successfully deleted!"
       find: "The product you are looking for could not be found"
+  store:
+    index:
+      title: "front page products" 
+    show:
+      title: "Show product %{title}"             

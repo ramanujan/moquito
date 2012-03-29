@@ -9,6 +9,7 @@
 body{
   padding:60px;
   margin:0px;
+  background:#f1f1ee; 
 }
 
 a:hover{
@@ -19,11 +20,33 @@ a:hover{
   border: solid 1px red;
 }
 
+.gray_line{
+  color:$hrGray;
+  background-color:$hrGray;
+  border-top:1px solid $hrGray;
+  border-bottom:1px solid #fff;
+}
+
 .gray_border{
  
-  border-right:solid 1px #c1c1c1;
+  border-right:solid 1px $hrGray;
 
 }
+
+.bordered_right_gray{
+  border-right:solid 1px #acabab;
+}
+
+.bordered_right_white{
+  border-right:solid 1px #fff;
+}
+
+
+.gray_background{
+  background:$gracefulGray
+}
+
+
 
 .main_nav{
   padding:0.7%;
@@ -46,6 +69,12 @@ a:hover{
 
 .metalic{
   @include metalic;
+}
+
+.metalic-rounded{
+  @include metalic;
+  @include radius-7;
+  padding:2%;
 }
 
 .section-header{
@@ -71,7 +100,18 @@ a:hover{
 }
 
 .cico{
+ 
   background-color:#fff;
+}
+
+.hero-cico{
+  @include blue-background;
+  color:#fff; 
+  span{
+    font-size:400%;
+    font-weight:bold;
+    line-height:110%;
+  }
 }
 
 .heading{
@@ -135,4 +175,9 @@ input.price{
 .submit{
   @include metalic;
   padding:1.5%;
+}
+
+.cart{
+  @include metalic;
+  @include radius-7;
 }

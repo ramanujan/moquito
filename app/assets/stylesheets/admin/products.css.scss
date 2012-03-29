@@ -6,6 +6,7 @@
 
 .product_description{
   font-size:110%;
+  line-height:110%;
 }
 
 .product_property{
@@ -33,6 +34,11 @@
   font-size:130%;
   @include cool_box;   
 }
+
+.product_price_show{
+  color:green;
+}
+
 .product_image_and_price{
   position:relative;
   
@@ -43,6 +49,8 @@
   border:solid 1px #c1c1c1;
 
   }
+
+
 
 .product_row_title{
   

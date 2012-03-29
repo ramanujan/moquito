@@ -32,6 +32,19 @@ end
 
 
 Then /^I should not see "([^"]*)"$/ do |name|
+   
    page.should_not have_content name
+end
+
+
+Then /^I should not see "([^"]*)" within "([^"]*)"$/ do |value,selector|
+   
+   page.should_not have_css(selector,:text=>value), "Expected NOT to see #{value.inspect} inside #{selector}, but did."
+
+end
+
+
+Then /^show me the page$/ do
+ save_and_open_page
 end
 

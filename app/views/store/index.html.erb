@@ -1,70 +1,47 @@
 <div class="row-fluid">
-
-  <div class="row-fluid">
-  	<div class="span12">
-  		<h1 class="heading"><%=t("brand")%></h1>
-    </div>
-  </div>
-  <br />
-  <br />
- <!--Navbar & search filed -->
- 
- <div class="row-fluid">
- 
- 	<div class="span9 main_navbar_container">
-           
-     	<%=render 'layouts/main_navbar'%>      
-        <hr />
-    
-    </div> 
-    
-    <div class="span3">
-    	<form class="form-search">
-      		<input type="text" class="input-medium search-query" placeholder="Search in the shop...">
-			<%=image_tag 'search.jpg'%>
-        </form>
-    </div>
-    
- </div> <!-- Navbar & search field -->		
- 
- <%if @products.any? %>
-   <div class="row-fluid"> <!-- Index products view-->  
-     <% iterator = StoreHelper::ProductsIterator.new(@products) %> 
-     <div class="span9"> 
-       <% iterator.grouped_products.each do |k,v| %>
-         <div class="row-fluid">
-           <% v.each do |product| %>
-             <div class="span3 product_info">
-       	       
-       	       <div class="product_image_and_price">
-       	       
-       	         <%=image_tag("missing_product.gif")%> 
+  <div class="shadow_wrapper span12">
+  	<div class="shadow_base span12 cico"> 
+    	<%=render 'shared/heading_row'%>  
+        <%if @products.any? %>
+        	<div class="row-fluid"> <!-- Index products view-->  
+     			<% iterator = StoreHelper::ProductsIterator.new(@products) %> 
+     			<div class="span9"> 
+       				<% iterator.grouped_products.each do |k,v| %>
+         				<div class	="row-fluid"> <!-- Ogni riga da tre elementi -->
+           					<% v.each do |product| %>
+             					<div class="span3 product_info">
+       	       						
+       	       						<!-- Image and price -->
+       	       						<div class="product_image_and_price">
+       	      							<%=image_tag("missing_product.gif")%> 
                  
-                 <div class="product_price">
-                   <%=number_to_currency(product.price)%>
-                 </div> 
+                 						<div class="product_price">
+                   							<%=number_to_currency(product.price)%>
+                 						</div> 
                
-               </div>
+               						</div>
+                                    
+                                    <!-- Title -->
+                                    <div class="heading_small">
+                 						<%=link_to product.title,store_product_path(product)%>	
+               						</div>
                
-               <div class="heading_small">
-                 <%=product.title%>	
-               </div>
+               						<!-- Description -->
+               						<hr class="gray_line"/> 
+               						<div class="product_description_small">
+                 						<%=sanitize(brief(product.description))%>	
+               						</div>
                
-               <hr /> 
-               <div class="product_description_small">
-                 <%=sanitize(product.description)%>	
-               </div>
-               
-             </div>
-           <%end%> 
-         </div>
-         <hr />
-         <br />
-       <%end%>
-    </div> 
-   </div>
- <%end%>
+                                </div> <!-- Fine product info -->
+                            <%end%> 
+                       </div> <!-- Ogni riga con tre elementi -->
+                       <hr class="gray_line"/>
+                       <br />
+                    <%end%>
+                </div> 
+            </div> <!-- Fine indexe prodcuct view -->
+     <%end%>
 
-
-
+   </div> <!-- cico -->
+  </div>
 </div>

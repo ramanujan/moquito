@@ -6,6 +6,10 @@ module ApplicationHelper
     @title ? (BASE_TITLE+" | "+@title) : BASE_TITLE 
   end
 
- 
+  def brief message
+   
+   message.length >= 180 ? (message[0..179]+"...") : message
+   
+  end 
 
 end

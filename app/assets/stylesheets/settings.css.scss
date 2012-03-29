@@ -41,3 +41,25 @@ $final:#c6c6c6;    //#f2f2f2;
         @include fancy-text;
 
        }
+ 
+ 
+ 
+ 
+ $init: #127bc8;   
+ $fin:   #09b7f9;    
+
+@mixin blue-background{
+ 
+ padding:2.5%;
+ background: $fin;
+ background: -webkit-gradient(linear, left top, right bottom, from($init), to($fin)); /* for webkit browsers */ 
+ background: -moz-linear-gradient(top,  $init,  $fin); /* for firefox 3.6+ */
+ background: -webkit-linear-gradient(top,$init, $fin);
+ background: -ms-linear-gradient(top, $init, $fin);
+ background: -o-linear-gradient(top, $init, $fin); 
+ //border-bottom: solid 1px #A1A1A1;
+ // border-right: solid 1px #A1A1A1;
+ border:solid 1px #a1a1a1;  
+ @include radius-7;
+}
+ 
