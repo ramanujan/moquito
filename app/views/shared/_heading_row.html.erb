@@ -1,14 +1,20 @@
  <div class="row-fluid"> <!--Brand and shop cart -->
   
-  	<div class="span8">
+  	<div class="span7">
   		<h1 class="heading"><%=t("brand")%></h1>
     </div>
     
-    <div class="span3 cart ">
-      <%=link_to('#') do%>
-      <span><%=image_tag('red_shop_bag.png')%></span>
-      <%end%>
-    </div>
+    <div class="span4 cart ">
+      <div class="row-fluid">
+        <div class="span2">
+          <%=link_to(cart_path) do%>
+            <%=image_tag('shopping.png')%>
+          <%end%>
+         </div>
+        <div class="span9">
+      	  <%=t("cart.items_present",qty:curr_cart.line_items.count)%>
+        </div> 
+     </div>
   
   </div>
 

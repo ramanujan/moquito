@@ -27,8 +27,21 @@
 	            
 	              <!-- Price And Description-->
 	              <div class="span7">
-	            	
-	            	<h1 class="product_price_show"><%=number_to_currency(@product.price)%></h1>
+	            	<div class="row-fluid">
+	            	    
+	            	    <div class="span7"> 
+	            			<h1 class="product_price_show"><%=number_to_currency(@product.price)%></h1>
+   	                    </div>
+   	                    
+   	                    <div class="span5">
+   	                      <%=link_to cart_line_items_path(product_id:@product), #Ricorda che gli helpers invocano @product.to_params
+   	                        class:"btn  btn-large", 
+   	                        :method=>:post do %>
+    	  				     <i class="icon-shopping-cart"></i>
+    	  				     <%=t("store.show.add_to_bag")%>
+    	  				  <%end%>  
+   	                    </div>
+   	                </div>
    	                
    	                <hr class="gray_line" />
 	                

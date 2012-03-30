@@ -14,8 +14,7 @@ class StoreController < ApplicationController
 
   def show
    find_product
-   @title=t("store.show.title")
-   p "PRICE==============>#{@product.price}"   
+   @title=t("store.show.title")  
   end
   
   

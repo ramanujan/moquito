@@ -1,4 +1,6 @@
 Moquito::Application.routes.draw do
+ 
+
   get "store/index"
 
   get "store/catalog"
@@ -23,8 +25,7 @@ Moquito::Application.routes.draw do
     root to:"base#index"
     resources :products
   end
-  
-  
+ 
 =begin  
  
   admin_root                /admin(.:format)                   admin/base#index
@@ -36,4 +37,16 @@ Moquito::Application.routes.draw do
                      PUT    /admin/products/:id(.:format)      admin/products#update
                      DELETE /admin/products/:id(.:format)      admin/products#destroy
 =end 
+
+   resource :cart, only:[:show] do
+    resources :line_items, only:[:create,:index]
+  end   
+
+=begin
+   cart_line_items GET    /cart/line_items(.:format)         line_items#index
+                   POST   /cart/line_items(.:format)         line_items#create
+   cart            GET    /cart(.:format)                    carts#show 
+=end
+
+
 end

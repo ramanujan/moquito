@@ -57,8 +57,17 @@ en:
       destroy:
         success: "%{title} was successfully deleted!"
       find: "The product you are looking for could not be found"
+  
   store:
     index:
       title: "front page products" 
     show:
-      title: "Show product %{title}"             
+      title: "Show product %{title}"  
+      add_to_bag: "ADD TO CART"
+  
+  line_items:
+    find: "The product is no longer present in ours databases"
+    create:
+      error: "New line items has not been inserted!"
+  cart: 
+    items_present : "%{qty} items in your shopping cart"          
