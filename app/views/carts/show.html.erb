@@ -8,13 +8,48 @@
 			  
 				<div class="span8 metalic-rounded">
 					<!-- Line Items -->
+					
 					<div>
 						<h1><%=t("line_items.show.shopping_cart")%></h1>
 					</div>
-	            	<hr class="gray_line">
-	          	</div>  
-	            
-	              
+	                <hr class="gray_line">
+	                
+	                <div class="row-fluid cart_heading">
+	                	<!--Colonna d'instestazione della tabella -->
+	                	
+	                	<div class="span4 cart_show_heading bordered_right_white">
+	                      <div class="bordered_right_gray">
+	                      	<%=t("cart.show.product")%>  
+	                      </div>
+	                    </div>
+	          	 
+	          	        <div class="span2 cart_show_heading bordered_right_white">
+	                      <div class="bordered_right_gray">
+	                      	<%=t("cart.show.price")%>  
+	                      </div>
+	                    </div>  
+	            	    
+	            	    <div class="span3 cart_show_heading bordered_right_white">
+	                      <div class="bordered_right_gray">
+	                      <%=t("cart.show.qty")%>  
+	                      </div>
+	                    </div>  
+	            	
+	            	     <div class="span2 cart_show_heading">
+	                      <%=t("cart.show.total")%>  
+	                    </div>  
+	            	
+	            	</div>
+	            	<hr class="gray_line"/>  
+	                
+	                <% if @line_items.any? %>
+	                  <% @line_items.each do |line_item| %>
+	                  		<%=render line_item%>
+	                        <hr class="gray_line"/>  
+	                   <%end%>
+	                   
+	                <%end%>
+	                 
 	        
 	        
 	        </div>

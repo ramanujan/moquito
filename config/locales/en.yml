@@ -70,4 +70,8 @@ en:
     create:
       error: "New line items has not been inserted!"
   cart: 
-    items_present : "%{qty} items in your shopping cart"          
+    items_present: "%{qty} items in your shopping cart"
+    show:
+      price: "Price"
+      qty: "Quantity"
+      total: "Total"          

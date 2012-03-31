@@ -1,0 +1,32 @@
+<div class="row-fluid">
+
+	<div class="span4 bordered_right_white">
+	  <div class="bordered_right_gray">   
+	    <div class="row-fluid">
+		
+			<div class="span6">
+				<%=image_tag("missing_product.gif")%>     		
+	        </div>
+		
+		    <div class="span6">
+		    
+		     <div class="row-fluid">
+		       <div class="cart_show_title"><%=link_to line_item.product.title, store_product_path(line_item.product)%></div>     
+		     </div>     	
+		     
+		    <br />
+		     
+		     <div class="row-fluid">
+		       <div class="cart_show_description"><%=brief(sanitize(line_item.product.description),:very_short)%></div>     
+		     </div>     	
+		     
+		    </div>
+		
+		</div>
+
+	</div>
+  </div> <!--Fine primo riquadro riguardo prodotto, segue prezzo che spanna su 2 colonne -->	 	
+
+
+
+</div>

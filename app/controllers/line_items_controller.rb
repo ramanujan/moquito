@@ -6,9 +6,9 @@ class LineItemsController < ApplicationController
   
   def create
       
-      @cart.line_items.build(product:@product) 
+      @line_item = @cart.add_product(@product.id) 
       
-      if @cart.save # Ricorda che anche così verrà aggiornata l'associazione e propagato il nuovo line item
+      if @line_item.save 
         redirect_to cart_path # Accende l'azione show() del controller CartController  
       else
         

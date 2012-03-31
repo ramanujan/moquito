@@ -3,8 +3,13 @@ class CartsController < ApplicationController
   def show
     
     @cart = curr_cart
-    @line_items = @cart.line_items.all    
+    
+    logger.info("_______________________________________INCLUDES___________________________________")
+    
+    @line_items = @cart.line_items.includes(:product).all    
   
+    logger.info("___________________________________________________________________________________")
+    
   end  
 
 

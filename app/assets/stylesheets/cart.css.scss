@@ -1,3 +1,22 @@
 // Place all the styles related to the cart controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import 'settings';
+
+.cart{
+  @include metalic;
+  @include radius-7;
+}
+
+.cart_show_heading{
+  font-size:130%;
+}
+.cart_show_title{
+  font-size:130%;
+  font-weight:bold;
+  // color:#0289cc;
+}
+.cart_show_description{
+  font-weight:bold;
+}

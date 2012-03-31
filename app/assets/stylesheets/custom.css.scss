@@ -7,6 +7,7 @@
 /* General styling */
 
 body{
+
   padding:60px;
   margin:0px;
   background:#f1f1ee; 
@@ -28,9 +29,7 @@ a:hover{
 }
 
 .gray_border{
- 
-  border-right:solid 1px $hrGray;
-
+   border-right:solid 1px $hrGray;
 }
 
 .bordered_right_gray{
@@ -41,12 +40,9 @@ a:hover{
   border-right:solid 1px #fff;
 }
 
-
 .gray_background{
   background:$gracefulGray
 }
-
-
 
 .main_nav{
   padding:0.7%;
@@ -57,6 +53,7 @@ a:hover{
 .main_navbar_container{
   margin-top:2%;
 }
+
 .first{
    border-left:solid 1px #a1a1a1;
 }
@@ -65,7 +62,6 @@ a:hover{
   text-align:center;
   
 }
-
 
 .metalic{
   @include metalic;
@@ -129,10 +125,6 @@ a:hover{
 
 /* Bootstrap override */
 
-.page-header{
- // text-align:center;
-}
-
 
 .btn-group{
   .btn {
@@ -177,7 +169,3 @@ input.price{
   padding:1.5%;
 }
 
-.cart{
-  @include metalic;
-  @include radius-7;
-}
